@@ -46,7 +46,7 @@ video.bgVideo {
     color: #ffffff;
     font-size: 8em;
     margin: 0;
-    line-height: 1em;
+    /*line-height: 1em;*/
 }
 
 .secondaryColor {
@@ -57,7 +57,7 @@ p {
     color: #ffffff;
     font-family: 'PT Mono', monospace;
     /*font-family: 'Gentium Book Basic', serif;*/
-    font-size: 1.3em;
+    font-size: 1.4em;
     text-transform: uppercase;
     margin: 0;
 }
