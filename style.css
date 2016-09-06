@@ -1,0 +1,72 @@
+body {
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+video.bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-30%, -50%);
+}
+
+.wrapper {
+    height: 50vh;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+ }
+
+.portrait{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-image: url(images/bill.png);
+    background-size: 130px;
+    margin:auto;
+    /*display: inline-block;*/
+}
+
+.nameWrapper {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+
+.name {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 8em;
+    margin: 0;
+    line-height: 1em;
+}
+
+.secondaryColor {
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff;
+    font-family: 'PT Mono', monospace;
+    /*font-family: 'Gentium Book Basic', serif;*/
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+        background: url(videos/Love-Coding.jpg) #000 no-repeat center center fixed;
+    }
+    .bgVideo {
+        display: none;
+    }
+}
