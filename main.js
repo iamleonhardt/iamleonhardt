@@ -1,20 +1,50 @@
-var app = angular.module('portfolioApp', ['ngRoute', 'ngAnimate']);
+var app = angular.module('portfolioApp', ['ngRoute', 'ngAnimate', 'ui.router', '$stateProvider']);
 
-app.config(function($routeProvider) {
-    $routeProvider
-        .when('/', {
-            templateUrl : 'main.html'
+app.config(function($stateProvider) {
+    $stateProvider
+        .state('main', {
+            views: {
+                'pageName': {
+
+                },
+                'body' : {
+                    templateUrl : 'main.html'
+                }
+            }
         })
-        .when('/applications', {
-            templateUrl : 'applications.html'
+        .state('/applications', {
+            views: {
+                'pageName': {
+
+                },
+                'body' : {
+                    templateUrl : 'applications.html'
+                }
+            }
         })
-        .when('/about', {
-            templateUrl : 'about.html'
+        .state('/about', {
+            views: {
+                'pageName': {
+
+                },
+                'body' : {
+                    templateUrl : 'about.html'
+                }
+            }        })
+        .state('/contact', {
+            views: {
+                'pageName': {
+
+                },
+                'body' : {
+                    templateUrl : 'contact.html'
+                }
+            }
         })
-        .when('/contact', {
-            templateUrl : 'contact.html'
-        })
-        .otherwise({
-            redirectTo: '/'
-        });
+        // .otherwise({  //todo add otherwise to state
+        //     redirectTo: '/'
+        // })
+    ;
 });
+
+
