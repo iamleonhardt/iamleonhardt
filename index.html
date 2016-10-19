@@ -13,8 +13,10 @@
     <script src="https://use.fontawesome.com/126e75703b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
 
     <script src="main.js"></script>
 </head>
@@ -24,16 +26,17 @@
     <source src="videos/Love-Coding.webm" type="video/webm">
     <source src="videos/Love-Coding.mp4" type="video/mp4"/>
 </video>
+<div id="pageName" ui-view="pageName"></div>
 <ul class="nav">
-    <li><a href="#/">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#applications">Applications</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="https://github.com/iamleonhardt"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-    <li><a href="https://linkedin.com/in/iamleonhardt"><i class="fa fa-linkedin" aria-hidden="true"></i>
+    <li ui-sref-active="active"><a ui-sref="main">Home</a></li>
+    <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+    <li ui-sref-active="active"><a ui-sref="applications">Applications</a></li>
+    <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
+    <li><a ui-sref="https://github.com/iamleonhardt"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+    <li><a ui-sref="https://linkedin.com/in/iamleonhardt"><i class="fa fa-linkedin" aria-hidden="true"></i>
     </a></li>
 </ul>
-<div class="wrapper fade" ng-view></div>
+<div class="wrapper fade" ui-view="body"></div>
 
 <footer>Handcrafted by Bill Leonhardt</footer>
 </body>
