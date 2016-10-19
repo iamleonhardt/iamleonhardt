@@ -33,6 +33,22 @@ video.bgVideo {
     width: 100vw;
 }
 
+#pageName{
+    padding: 12px 0 20px 0;
+    margin: 0 0 0 57px;
+    /* background-color: #595959; */
+    /* opacity: 0.9; */
+    list-style: none;
+    text-align: left;
+    font-size: 31px;
+    /* font-family: 'PT Mono', monospace; */
+    text-transform: lowercase;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    width: 20vw;
+}
+
 .nav > li {
     display: inline-block;
     padding: 0 30px 0 10px;
