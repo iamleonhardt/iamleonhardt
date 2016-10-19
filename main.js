@@ -15,7 +15,7 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
             url: '/',
             views: {
                 'pageName': {
-
+                    template: '<h4>Applications</h4>'
                 },
                 'body' : {
                     templateUrl : 'partials/applications.html'
@@ -26,7 +26,7 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
             url: '/',
             views: {
                 'pageName': {
-                    template: 'About'
+                    template: '<h4>About</h4>'
                 },
                 'body' : {
                     templateUrl : 'partials/about.html'
@@ -36,7 +36,7 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
             url: '/',
             views: {
                 'pageName': {
-
+                    template: '<h4>Contact</h4>'
                 },
                 'body' : {
                     templateUrl : 'partials/contact.html'
