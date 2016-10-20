@@ -114,7 +114,7 @@ h4 {
 p {
     font-size: 1em;
     /*text-transform: uppercase;*/
-    margin: 0 4vw;
+    /*margin: 0 4vw;*/
     text-align: left;
     display: inline-block;
 }
@@ -145,10 +145,15 @@ footer {
     color: #ffffff;
     position: absolute;
     left: 16px;
-    top: 30%;
+    top: 28%;
 }
 
 .cardSubTitle {
+
+}
+
+.cardText {
+    padding: 0 16px;
 
 }
 
@@ -159,7 +164,6 @@ footer {
     /*position: absolute;*/
     /*top: 0px;*/
     background-image: url(images/ph.jpg);
-
 }
 
 .cardActionBar {
@@ -175,7 +179,7 @@ footer {
     outline: none;
     position: relative;
     display: inline-block;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 52px;
     padding: 0 16px;
     color: #ff1744;
