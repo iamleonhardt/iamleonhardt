@@ -5,6 +5,14 @@ body {
     padding: 0;
     font-family: Roboto, Arial, sans-serif;
     color: #ffffff;
+    background: linear-gradient(141deg, #04b89c 0%, #1fc8db 51%, #278fe8 75%);
+    background: linear-gradient(12deg, #E6DADA 10%, #274046);
+    /*background: linear-gradient(-172deg, #5D4157 10%, #A8CABA);*/
+    background: linear-gradient(2deg, #757F9A 10%, #D7DDE8);
+    background: linear-gradient(2deg, #304352 10%, #d7d2cc);
+
+
+
 }
 
 video.bgVideo {
@@ -75,9 +83,9 @@ video.bgVideo {
  }
 
 .portrait{
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border-radius: 6px;
     background-image: url(images/bill.png);
     background-size: 130px;
     margin:auto;
@@ -130,14 +138,17 @@ footer {
 }
 
 .card {
-    width: 30vw;
-    height: 40vh;
+    /*width: 30vw;*/
+    /*height: 40vh;*/
+    width: 300px;
+    height: 340px;
     margin: 1vw;
     color: #333333;
     background-color: #fafafa;
     text-align: left;
     display: inline-block;
     position: relative;
+    vertical-align: top;
 }
 
 .cardTitle {
@@ -146,6 +157,7 @@ footer {
     position: absolute;
     left: 16px;
     top: 28%;
+    transition: width 2s, height 2s;
 }
 
 .cardSubTitle {
@@ -163,7 +175,7 @@ footer {
     /*background-color: #fafafa;*/
     /*position: absolute;*/
     /*top: 0px;*/
-    background-image: url(images/ph.jpg);
+    /*background-image: url(images/image.jpg);*/
 }
 
 .cardActionBar {

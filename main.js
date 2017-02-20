@@ -18,8 +18,10 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
                     template: '<h4>Applications</h4>'
                 },
                 'body' : {
-                    templateUrl : 'partials/applications.html'
+                    templateUrl : 'partials/applications.html',
+                    controller : 'applicationsController'
                 }
+
             }
         })
         .state('about', {
@@ -31,19 +33,25 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
                 'body' : {
                     templateUrl : 'partials/about.html'
                 }
-            }        })
-        .state('contact', {
-            url: '/',
-            views: {
-                'pageName': {
-                    template: '<h4>Contact</h4>'
-                },
-                'body' : {
-                    templateUrl : 'partials/contact.html'
-                }
             }
-        })
-    ;
+        });
 }]);
 
+app.controller('applicationsController', ['$http', '$scope', '$window', function($http, $scope, $window){
+
+    $scope.detailsModal = function(){
+        console.log('details clicked, open modal');
+    };
+
+    $scope.liveProject = function(app){
+        console.log('link is : ', app.link);
+            $window.open(app.link, '_blank');
+    }
+
+    $http.get('applicationList.json')
+        .success(function(data){
+        $scope.applications = data.applications;
+        console.log(data);
+    })
+}]);
 

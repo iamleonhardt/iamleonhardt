@@ -22,20 +22,24 @@
 </head>
 <body ng-app="portfolioApp">
 
-<video autoplay loop poster="videos/Love-Coding.jpg" class="bgVideo">
-    <source src="videos/Love-Coding.webm" type="video/webm">
-    <source src="videos/Love-Coding.mp4" type="video/mp4"/>
-</video>
+<!--<video autoplay loop poster="videos/Love-Coding.jpg" class="bgVideo">-->
+    <!--<source src="videos/Love-Coding.webm" type="video/webm">-->
+    <!--<source src="videos/Love-Coding.mp4" type="video/mp4"/>-->
+<!--</video>-->
 <div id="pageName" class="fade1" ui-view="pageName"></div>
-<ul class="nav">
-    <li ui-sref-active="active"><a ui-sref="main">Home</a></li>
-    <li ui-sref-active="active"><a ui-sref="about">About</a></li>
-    <li ui-sref-active="active"><a ui-sref="applications">Applications</a></li>
-    <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
-    <li><a ui-sref="https://github.com/iamleonhardt"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-    <li><a ui-sref="https://linkedin.com/in/iamleonhardt"><i class="fa fa-linkedin" aria-hidden="true"></i>
-    </a></li>
-</ul>
+
+<nav>
+    <a href="#" id="menu-icon"></a>
+    <ul class="nav">
+        <li ui-sref-active="active"><a ui-sref="main">Home</a></li>
+        <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+        <li ui-sref-active="active"><a ui-sref="applications">Applications</a></li>
+        <li><a ui-sref="https://github.com/iamleonhardt"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a ui-sref="https://linkedin.com/in/iamleonhardt"><i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a></li>
+    </ul>
+</nav>
+
 <div class="wrapper fade2" ui-view="body"></div>
 
 <footer>Handcrafted by Bill Leonhardt</footer>
