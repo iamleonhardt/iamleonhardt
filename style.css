@@ -22,7 +22,7 @@ h4 {
 }
 
 p {
-    font-size: 1em;
+    font-size: .9em;
     text-align: left;
     display: inline-block;
 }
@@ -195,12 +195,10 @@ video.bgVideo {
 
 /*Applications Page*/
 .card {
-    /*width: 30vw;*/
-    /*height: 40vh;*/
-    width: 300px;
-    height: 340px;
+    width: 260px;
+    height: 260px;
     margin: 1vw;
-    color: #333333;
+    color: #afafaf;
     background-color: #fafafa;
     text-align: left;
     display: inline-block;
@@ -210,7 +208,7 @@ video.bgVideo {
 
 .cardImage {
     width:100%;
-    height: 46%;
+    height: 100%;
     /*background-color: #fafafa;*/
     /*position: absolute;*/
     /*top: 0px;*/
@@ -222,7 +220,7 @@ video.bgVideo {
     color: #ffffff;
     position: absolute;
     left: 16px;
-    top: 28%;
+    top: 0;
     transition: width 2s, height 2s;
 }
 
@@ -231,6 +229,8 @@ video.bgVideo {
 }
 
 .cardText {
+    position: absolute;
+    top: 20%;
     padding: 0 16px;
 }
 
@@ -299,6 +299,10 @@ video.bgVideo {
     opacity: 0;
 }
 
+
+[ng-click] {
+    cursor: pointer;
+}
 
 /*Media Queries*/
 @media screen and (max-device-width: 800px) {

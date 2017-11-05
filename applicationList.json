@@ -22,7 +22,7 @@
       "title" : "Date Finder",
       "image" : "images/image.jpg",
       "text" : "text",
-      "link" : "http://iamleonhardt.com/dateFinder"
+      "link" : "http://iamleonhardt.com/C9_hackathon"
     },
     {
       "title" : "Calculator",
@@ -34,7 +34,7 @@
       "title" : "Memory Match",
       "image" : "images/image.jpg",
       "text" : "text",
-      "link" : "http://iamleonhardt.com/memoryMatch"
+      "link" : "http://iamleonhardt.com/memory_match"
     },
     {
       "title" : "Tic Tac Toe",
@@ -59,6 +59,18 @@
       "image" : "images/image.jpg",
       "text" : "text",
       "link" : "http://iamleonhardt.com/spaceships"
+    },
+    {
+      "title" : "Drums",
+      "image" : "images/image.jpg",
+      "text" : "Drumkit - use keyboard to play drums",
+      "link" : "http://iamleonhardt.com/drums"
+    },
+    {
+      "title" : "Hacker Solitaire",
+      "image" : "images/image.jpg",
+      "text" : "Use L33t Haxor skills to defeat evil corp in a solitaire like game",
+      "link" : "http://iamleonhardt.com/HackerSolitaire"
     }
   ]
 }
