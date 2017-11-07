@@ -6,12 +6,13 @@ body {
     color: #ffffff;
     /*background: linear-gradient(12deg, #E6DADA 10%, #274046);*/
     background: linear-gradient(12deg, #E6DADA 10%, #2a3032);
+    background: linear-gradient(12deg, #7e8ab6 -15%, #191d1e);
     /*background-color: #000;*/
 }
 
 #description {
     color: #98ff00;
-    /*color: #00e3ff;*/
+    color: #00e3ff;
     font-family: 'PT Mono', monospace;
     font-size: 1.4em;
     text-transform: uppercase;
@@ -90,9 +91,9 @@ video.bgVideo {
     list-style: none;
     /* text-align: right; */
     text-transform: lowercase;
-    /* position: absolute; */
+     position: relative;
     /* top: -12px; */
-    /* right: 20px; */
+     right: 10px;
     z-index: 100;
     /* width: 100vw; */
 }
@@ -140,6 +141,21 @@ video.bgVideo {
     position: relative;
 }
 
+.nameWrapperLeft {
+    display: inline-block;
+    margin-bottom: 40px;
+    position: relative;
+    right:150px;
+}
+
+.nameWrapperRight {
+    display: inline-block;
+    margin-bottom: 40px;
+    position: relative;
+    left:150px;
+}
+
+
 .name {
     font-family: 'Oswald', sans-serif;
     font-size: 8em;
@@ -148,7 +164,7 @@ video.bgVideo {
 
 .name {
     position: relative;
-    left: 46px;
+    left: 42px;
     display: inline-block;
     font-family: 'Oswald', sans-serif;
     font-size: 8em;
