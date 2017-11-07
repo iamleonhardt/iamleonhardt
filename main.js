@@ -1,43 +1,33 @@
-var app = angular.module('portfolioApp', ['ngAnimate', 'ui.router']);
+var app = angular.module('portfolioApp', ['ngRoute']);
 
-app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
-    $urlRouterProvider.otherwise('/');
-    $stateProvider
-        .state('main', {
-            url: '/',
-            views: {
-                'body' : {
-                    templateUrl : 'partials/main.html'
-                }
-            }
+app.config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+        .when('/home', {
+            templateUrl: 'partials/applications.html',
+            controller: 'applicationsController'
         })
-        .state('applications', {
-            url: '/',
-            views: {
-                'pageName': {
-                    template: '<h4>Applications</h4>'
-                },
-                'body' : {
-                    templateUrl : 'partials/applications.html',
-                    controller : 'applicationsController'
-                }
-
-            }
+        .when('/work', {
+            templateUrl: 'partials/applications.html',
+            controller: 'applicationsController'
         })
-        .state('about', {
-            url: '/',
-            views: {
-                'pageName': {
-                    template: '<h4>About</h4>'
-                },
-                'body' : {
-                    templateUrl : 'partials/about.html'
-                }
-            }
-        });
+        .when('/about', {
+            templateUrl: 'partials/about.html'
+        })
+        .otherwise({
+            redirectTo: '/home'
+        })
 }]);
 
 app.controller('applicationsController', ['$http', '$scope', '$window', function($http, $scope, $window){
+
+    $http.get('applicationList.json')
+        .then(function(success){
+            console.log('$http.get is successful: ', success);
+            $scope.applications = success.data.applications;
+
+        }, function(error){
+            console.log('Error: ', error);
+        })
 
     $scope.detailsModal = function(){
         console.log('details clicked, open modal');
@@ -46,12 +36,8 @@ app.controller('applicationsController', ['$http', '$scope', '$window', function
     $scope.liveProject = function(app){
         console.log('link is : ', app.link);
             $window.open(app.link, '_blank');
-    }
+    };
 
-    $http.get('applicationList.json')
-        .success(function(data){
-        $scope.applications = data.applications;
-        console.log(data);
-    })
+
 }]);
 

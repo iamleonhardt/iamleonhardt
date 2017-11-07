@@ -1,34 +1,32 @@
 body {
     text-align: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: Roboto, Arial, sans-serif;
     color: #ffffff;
-    background: linear-gradient(141deg, #04b89c 0%, #1fc8db 51%, #278fe8 75%);
-    background: linear-gradient(12deg, #E6DADA 10%, #274046);
-    /*background: linear-gradient(-172deg, #5D4157 10%, #A8CABA);*/
-    background: linear-gradient(2deg, #757F9A 10%, #D7DDE8);
-    background: linear-gradient(2deg, #304352 10%, #d7d2cc);
+    /*background: linear-gradient(12deg, #E6DADA 10%, #274046);*/
+    background: linear-gradient(12deg, #E6DADA 10%, #2a3032);
+    /*background-color: #000;*/
 }
 
-h4 {
+#description {
+    color: #98ff00;
+    /*color: #00e3ff;*/
     font-family: 'PT Mono', monospace;
-    /*font-family: 'Gentium Book Basic', serif;*/
     font-size: 1.4em;
     text-transform: uppercase;
-    margin: 0 4vw;
-    text-align: left;
+    margin: 0;
 }
 
 p {
     font-size: .9em;
     text-align: left;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 footer {
-    position: absolute;
+    position: relative;
+    width: 100%;
     bottom: 0;
     right: 20px;
     font-size: 12px;
@@ -53,17 +51,18 @@ video.bgVideo {
     z-index: -100;
     transform: translate(-30%, -50%);
 }
+
+
 /*Nav Bar*/
 .nav {
     padding: 25px 0 25px 0;
     margin: 0 10px 0 0;
-    /*background-color: #595959;*/
-    /*opacity: 0.9;*/
     list-style: none;
     text-align: right;
-    /*font-family: 'PT Mono', monospace;*/
     text-transform: lowercase;
-    position: fixed;
+    position: absolute;
+    top:0;
+    right: 20px;
     z-index: 100;
     width: 100vw;
 }
@@ -83,14 +82,40 @@ video.bgVideo {
     color: #c1c1c1;
 }
 
+/*Nav Ba 2r*/
+.nav2 {
+    display: inline-block;
+    /* padding: 25px 0 25px 0; */
+    margin: 0;
+    list-style: none;
+    /* text-align: right; */
+    text-transform: lowercase;
+    /* position: absolute; */
+    /* top: -12px; */
+    /* right: 20px; */
+    z-index: 100;
+    /* width: 100vw; */
+}
+
+.nav2 > li {
+    /*display: inline-block;*/
+    padding: 0 14px 0 14px;
+    opacity: 1.0;
+}
+
+.nav2 > li > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav2 > li > a:hover {
+    color: #c1c1c1;
+}
+
 #pageName{
     padding: 25px 0 20px 0;
-    /* margin: 0 0 0 0px; */
-    /* background-color: #595959; */
-    /* opacity: 0.9; */
     list-style: none;
     text-align: left;
-    /* font-size: 31px; */
     font-family: 'PT Mono', monospace;
     text-transform: uppercase;
     position: fixed;
@@ -111,9 +136,8 @@ video.bgVideo {
 
 .nameWrapper {
     display: inline-block;
-    margin: 20px;
+    margin-bottom: 40px;
     position: relative;
-    transform: translateY(50%);
 }
 
 .name {
@@ -122,26 +146,33 @@ video.bgVideo {
     margin: 0;
 }
 
+.name {
+    position: relative;
+    left: 46px;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 8em;
+    margin: 0 auto;
+}
 
 /*About Page*/
 .portrait{
-    height: 200px;
-    width: 200px;
-    border-radius: 6px;
-    background-image: url(images/bill.png);
-    background-size: 130px;
-    margin:auto;
-    display: inline-block;
-}
+     height: 200px;
+     width: 200px;
+     border-radius: 6px;
+     background-image: url(images/bill.png);
+     background-size: 130px;
+     margin:auto;
+     display: inline-block;
+ }
 
 .aboutCard {
-    /*width: 30vw;*/
-    /*height: 40vh;*/
-    width: 300px;
-    height: 800px;
+    font-size:0;
+    width: 950px;
+    height: 220px;
     margin: 1vw;
-    color: #333333;
-    background-color: #fafafa;
+    color: #ffffff;
+    background-color: #484848;
     text-align: left;
     display: inline-block;
     position: relative;
@@ -149,21 +180,31 @@ video.bgVideo {
 }
 
 .aboutCardImage {
-    width:100%;
-    height: 35%;
-    /*background-color: #fafafa;*/
-    /*position: absolute;*/
-    /*top: 0px;*/
-    /*background-image: url(images/image.jpg);*/
+    display: inline-block;
+    background-image: url(images/bill.png);
+    width: 180px;
+    height: 180px;
+    margin:20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutCardDetails {
+    padding: 10px;
+    vertical-align: top;
+    font-size:16px;
+    display: inline-block;
+    width: 710px;
+    height: 180px;
 }
 
 .aboutCardTitle {
     font-weight:400;
-    color: #ffffff;
-    position: absolute;
-    left: 16px;
-    top: 28%;
-    transition: width 2s, height 2s;
+    color: #818181;
+    /*position: absolute;*/
+    /*left: 16px;*/
+    /*top: 28%;*/
+    /*transition: width 2s, height 2s;*/
 }
 
 .aboutCardSubTitle {
@@ -195,8 +236,8 @@ video.bgVideo {
 
 /*Applications Page*/
 .card {
-    width: 260px;
-    height: 260px;
+    width: 220px;
+    height: 220px;
     margin: 1vw;
     color: #afafaf;
     background-color: #fafafa;
@@ -253,61 +294,18 @@ video.bgVideo {
 }
 
 
-/* NG Animation */
-.fade1 {
-
-}
-
-.fade2 {
-
-}
-
-.fade2.ng-enter {
-    opacity: 0;
-    transition: 1s linear all;
-    -webkit-transition: 1s linear all;
-}
-
-.fade2.ng-enter.ng-enter-active {
-    opacity: 1;
-}
-
-.fade2.ng-leave {
-    opacity: 1;
-}
-
-.fade2.ng-leave.ng-leave-active {
-    opacity: 0;
-}
-
-
-.fade1.ng-enter {
-    opacity: 0;
-    transition: 0.2s linear all;
-    -webkit-transition: 0.2s linear all;
-}
-
-.fade1.ng-enter.ng-enter-active {
-    opacity: 1;
-}
-
-.fade1.ng-leave {
-    opacity: 1;
-}
-
-.fade1.ng-leave.ng-leave-active {
-    opacity: 0;
-}
-
-
 [ng-click] {
     cursor: pointer;
+}
+
+[ng-view] {
+    height: 800px;
 }
 
 /*Media Queries*/
 @media screen and (max-device-width: 800px) {
     html {
-        background: url(videos/Love-Coding.jpg) #000 no-repeat center center fixed;
+        /*background: url(videos/Love-Coding.jpg) #000 no-repeat center center fixed;*/
     }
     .bgVideo {
         display: none;
