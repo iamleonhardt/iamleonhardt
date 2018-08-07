@@ -7,7 +7,9 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
             url: '/',
             views: {
                 'body' : {
-                    templateUrl : 'partials/main.html'
+                    templateUrl : 'partials/main.html',
+                    controller : 'applicationsController'
+
                 }
             }
         })

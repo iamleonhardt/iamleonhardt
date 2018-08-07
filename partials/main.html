@@ -1,5 +1,21 @@
+<!-- <div class="portrait"></div> -->
+
 <div class="nameWrapper">
     <h1 class="name">i<span class="secondaryColor">am</span>leonhardt</h1>
     <h4>| ux designer | web developer | lover | fighter |</h4>
+
+    <div class=aboutText>My name is Bill and I've worked in Software Development for the last 2 years.</div>
+
+<div class="appContainer">
+    <div class="card" ng-repeat="app in applications">
+            <div class="cardImage" style="background: linear-gradient(rgba(40,40,40,0.4), rgba(40,40,40,.9)), url({{ app.image}});">
+                <h2 class="cardTitle">{{ app.title }}</h2>
+            </div>
+            <p class="cardText">{{ app.text }}</p>
+            <div class="cardActionBar">
+                <button class="cardButton" ng-click="liveProject(app)">Demo</button>
+                <button class="cardButton" ng-click="detailsModal()">Details</button>
+            </div>
+        </div>
 </div>
-<!--<div class="portrait"></div>-->
+</div>
