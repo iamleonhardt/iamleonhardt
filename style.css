@@ -5,11 +5,7 @@ body {
     padding: 0;
     font-family: Roboto, Arial, sans-serif;
     color: #ffffff;
-    background: linear-gradient(141deg, #04b89c 0%, #1fc8db 51%, #278fe8 75%);
-    background: linear-gradient(12deg, #E6DADA 10%, #274046);
-    /*background: linear-gradient(-172deg, #5D4157 10%, #A8CABA);*/
-    background: linear-gradient(2deg, #757F9A 10%, #D7DDE8);
-    background: linear-gradient(2deg, #304352 10%, #d7d2cc);
+background-color: #86cdc1;
 }
 
 h4 {
@@ -22,7 +18,7 @@ h4 {
 }
 
 p {
-    font-size: .9em;
+    font-size: 1em;
     text-align: left;
     display: inline-block;
 }
@@ -32,7 +28,7 @@ footer {
     bottom: 0;
     right: 20px;
     font-size: 12px;
-    color: #9a9a9a;
+    color: #000000;
     text-align: right;
     margin: 10px 0;
 }
@@ -195,10 +191,12 @@ video.bgVideo {
 
 /*Applications Page*/
 .card {
-    width: 260px;
-    height: 260px;
+    /*width: 30vw;*/
+    /*height: 40vh;*/
+    width: 300px;
+    height: 340px;
     margin: 1vw;
-    color: #afafaf;
+    color: #333333;
     background-color: #fafafa;
     text-align: left;
     display: inline-block;
@@ -208,7 +206,7 @@ video.bgVideo {
 
 .cardImage {
     width:100%;
-    height: 100%;
+    height: 46%;
     /*background-color: #fafafa;*/
     /*position: absolute;*/
     /*top: 0px;*/
@@ -220,7 +218,7 @@ video.bgVideo {
     color: #ffffff;
     position: absolute;
     left: 16px;
-    top: 0;
+    top: 28%;
     transition: width 2s, height 2s;
 }
 
@@ -229,8 +227,6 @@ video.bgVideo {
 }
 
 .cardText {
-    position: absolute;
-    top: 20%;
     padding: 0 16px;
 }
 
@@ -299,10 +295,6 @@ video.bgVideo {
     opacity: 0;
 }
 
-
-[ng-click] {
-    cursor: pointer;
-}
 
 /*Media Queries*/
 @media screen and (max-device-width: 800px) {
