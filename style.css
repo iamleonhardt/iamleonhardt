@@ -5,19 +5,39 @@ body {
     padding: 0;
     font-family: Roboto, Arial, sans-serif;
     color: #ffffff;
+background-color: #86cdc1;
 }
 
-video.bgVideo {
-    position: fixed;
-    top: 50%;
-    left: 30%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translate(-30%, -50%);
+h4 {
+    font-family: 'PT Mono', monospace;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    margin: 0 4vw;
+
 }
+
+p {
+    font-size: 1em;
+    text-align: left;
+    display: inline-block;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    font-size: 12px;
+    color: #000000;
+    text-align: right;
+    margin: 10px 0;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+
 /*Nav Bar*/
 .nav {
     padding: 25px 0 25px 0;
@@ -31,6 +51,21 @@ video.bgVideo {
     position: fixed;
     z-index: 100;
     width: 100vw;
+}
+
+.nav > li {
+    display: inline-block;
+    padding: 0 14px 0 14px;
+    opacity: 1.0;
+}
+
+.nav > li > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav > li > a:hover {
+    color: #c1c1c1;
 }
 
 #pageName{
@@ -49,21 +84,6 @@ video.bgVideo {
     width: 20vw;
 }
 
-.nav > li {
-    display: inline-block;
-    padding: 0 30px 0 10px;
-    opacity: 1.0;
-}
-
-.nav > li > a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.nav > li > a:hover {
-    color: #c1c1c1;
-}
-
 /*Name Wrapper*/
 .wrapper {
     height: 86vh;
@@ -74,87 +94,44 @@ video.bgVideo {
     overflow: auto;
  }
 
-.portrait{
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    background-image: url(images/bill.png);
-    background-size: 130px;
-    margin:auto;
-    display: inline-block;
-}
-
-.nameWrapper {
+/* .nameWrapper {
     display: inline-block;
     margin: 20px;
     position: relative;
     transform: translateY(50%);
-}
+} */
 
 .name {
     font-family: 'Oswald', sans-serif;
     font-size: 8em;
     margin: 0;
-    /*line-height: 1em;*/
 }
 
-.secondaryColor {
-    /*color: #ffffff;*/
+
+/* Application Wrapper */
+.appContainer {
+    width: 1200px;
+    margin: 0 auto;
 }
 
-h4 {
-    font-family: 'PT Mono', monospace;
-    /*font-family: 'Gentium Book Basic', serif;*/
-    font-size: 1.4em;
-    text-transform: uppercase;
-    margin: 0 4vw;
-    text-align: left;
+.aboutText {
+    margin: 40px 0;
+    color: #3a3a3a;
 }
 
-p {
-    font-size: 1em;
-    /*text-transform: uppercase;*/
-    /*margin: 0 4vw;*/
-    text-align: left;
-    display: inline-block;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-    font-size: 12px;
-    color: #9a9a9a;
-    text-align: right;
-    margin: 10px 0;
-}
-
+/*Applications Page*/
 .card {
-    width: 30vw;
-    height: 40vh;
+    /*width: 30vw;*/
+    /*height: 40vh;*/
+    width: 300px;
+    height: 340px;
     margin: 1vw;
     color: #333333;
     background-color: #fafafa;
     text-align: left;
     display: inline-block;
     position: relative;
-}
-
-.cardTitle {
-    font-weight:400;
-    color: #ffffff;
-    position: absolute;
-    left: 16px;
-    top: 28%;
-}
-
-.cardSubTitle {
-
-}
-
-.cardText {
-    padding: 0 16px;
-
+    vertical-align: top;
 }
 
 .cardImage {
@@ -163,7 +140,24 @@ footer {
     /*background-color: #fafafa;*/
     /*position: absolute;*/
     /*top: 0px;*/
-    background-image: url(images/ph.jpg);
+    /*background-image: url(images/image.jpg);*/
+}
+
+.cardTitle {
+    font-weight:400;
+    color: #ffffff;
+    position: absolute;
+    left: 16px;
+    top: 28%;
+    transition: width 2s, height 2s;
+}
+
+.cardSubTitle {
+
+}
+
+.cardText {
+    padding: 0 16px;
 }
 
 .cardActionBar {
@@ -172,7 +166,6 @@ footer {
     width: 100%;
     position: absolute;
     bottom: 0;
-
 }
 
 .cardButton {
@@ -185,12 +178,8 @@ footer {
     color: #ff1744;
 }
 
-button {
-    border: none;
-    background: transparent;
-}
 
-/* ng animation */
+/* NG Animation */
 .fade1 {
 
 }
@@ -237,7 +226,7 @@ button {
 }
 
 
-
+/*Media Queries*/
 @media screen and (max-device-width: 800px) {
     html {
         background: url(videos/Love-Coding.jpg) #000 no-repeat center center fixed;
