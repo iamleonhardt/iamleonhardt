@@ -54,10 +54,15 @@ button {
   background: transparent;
 }
 
+@media screen and (max-width: 760px) {
+  .card {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
 .card {
-  /* width: 300px; */
   height: 340px;
-  /* margin: 1vw; */
   color: #333333;
   background-color: #fafafa;
   text-align: left;
