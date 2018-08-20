@@ -1,237 +1,111 @@
 body {
-    text-align: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: Roboto, Arial, sans-serif;
-    color: #ffffff;
-background-color: #86cdc1;
+  background-color: #86cdc1;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
 }
 
 h4 {
-    font-family: 'PT Mono', monospace;
-    font-size: 1.4em;
-    text-transform: uppercase;
-    margin: 0 4vw;
-
+  font-family: "PT Mono", monospace;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin: 0 4vw;
 }
 
-p {
-    font-size: 1em;
-    text-align: left;
-    display: inline-block;
+.nameComponent {
+  margin: 30px 0 0 0;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  color: #ffffff;
+}
+
+.name {
+  font-family: "Oswald", sans-serif;
+  font-size: 8em;
+  margin: 0 auto;
+}
+
+.aboutComponent {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 40px 0;
+  color: #3a3a3a;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-    font-size: 12px;
-    color: #000000;
-    text-align: right;
-    margin: 10px 0;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  font-size: 12px;
+  color: #000000;
+  text-align: right;
+  padding: 10px;
+  /* margin: 20px 0; */
 }
 
 button {
-    border: none;
-    background: transparent;
+  border: none;
+  background: transparent;
 }
 
-
-/*Nav Bar*/
-.nav {
-    padding: 25px 0 25px 0;
-    margin: 0 10px 0 0;
-    /*background-color: #595959;*/
-    /*opacity: 0.9;*/
-    list-style: none;
-    text-align: right;
-    /*font-family: 'PT Mono', monospace;*/
-    text-transform: lowercase;
-    position: fixed;
-    z-index: 100;
-    width: 100vw;
+@media screen and (max-width: 760px) {
+  .card {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
 }
 
-.nav > li {
-    display: inline-block;
-    padding: 0 14px 0 14px;
-    opacity: 1.0;
-}
-
-.nav > li > a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.nav > li > a:hover {
-    color: #c1c1c1;
-}
-
-#pageName{
-    padding: 25px 0 20px 0;
-    /* margin: 0 0 0 0px; */
-    /* background-color: #595959; */
-    /* opacity: 0.9; */
-    list-style: none;
-    text-align: left;
-    /* font-size: 31px; */
-    font-family: 'PT Mono', monospace;
-    text-transform: uppercase;
-    position: fixed;
-    left: 0;
-    z-index: 100;
-    width: 20vw;
-}
-
-/*Name Wrapper*/
-.wrapper {
-    height: 86vh;
-    position:relative;
-    top:52%;
-    transform: translateY(-50%);
-    text-align: center;
-    overflow: auto;
- }
-
-/* .nameWrapper {
-    display: inline-block;
-    margin: 20px;
-    position: relative;
-    transform: translateY(50%);
-} */
-
-.name {
-    font-family: 'Oswald', sans-serif;
-    font-size: 8em;
-    margin: 0;
-}
-
-
-/* Application Wrapper */
-.appContainer {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.aboutText {
-    margin: 40px 0;
-    color: #3a3a3a;
-}
-
-/*Applications Page*/
 .card {
-    /*width: 30vw;*/
-    /*height: 40vh;*/
-    width: 300px;
-    height: 340px;
-    margin: 1vw;
-    color: #333333;
-    background-color: #fafafa;
-    text-align: left;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
+  height: 340px;
+  color: #333333;
+  background-color: #fafafa;
+  text-align: left;
+  position: relative;
+  vertical-align: top;
 }
 
 .cardImage {
-    width:100%;
-    height: 46%;
-    /*background-color: #fafafa;*/
-    /*position: absolute;*/
-    /*top: 0px;*/
-    /*background-image: url(images/image.jpg);*/
+  width: 100%;
+  height: 46%;
+  /*background-color: #fafafa;*/
+  /*position: absolute;*/
+  /*top: 0px;*/
+  /*background-image: url(images/image.jpg);*/
 }
 
 .cardTitle {
-    font-weight:400;
-    color: #ffffff;
-    position: absolute;
-    left: 16px;
-    top: 28%;
-    transition: width 2s, height 2s;
-}
-
-.cardSubTitle {
-
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+  left: 16px;
+  top: 28%;
+  transition: width 2s, height 2s;
 }
 
 .cardText {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
 .cardActionBar {
-    border-top: 1px solid #E0E0E0;
-    height: 52px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+  border-top: 1px solid #e0e0e0;
+  height: 52px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .cardButton {
-    outline: none;
-    position: relative;
-    display: inline-block;
-    font-size: 18px;
-    line-height: 52px;
-    padding: 0 16px;
-    color: #ff1744;
-}
-
-
-/* NG Animation */
-.fade1 {
-
-}
-
-.fade2 {
-
-}
-
-.fade2.ng-enter {
-    opacity: 0;
-    transition: 1s linear all;
-    -webkit-transition: 1s linear all;
-}
-
-.fade2.ng-enter.ng-enter-active {
-    opacity: 1;
-}
-
-.fade2.ng-leave {
-    opacity: 1;
-}
-
-.fade2.ng-leave.ng-leave-active {
-    opacity: 0;
-}
-
-
-.fade1.ng-enter {
-    opacity: 0;
-    transition: 0.2s linear all;
-    -webkit-transition: 0.2s linear all;
-}
-
-.fade1.ng-enter.ng-enter-active {
-    opacity: 1;
-}
-
-.fade1.ng-leave {
-    opacity: 1;
-}
-
-.fade1.ng-leave.ng-leave-active {
-    opacity: 0;
-}
-
-
-/*Media Queries*/
-@media screen and (max-device-width: 800px) {
-    html {
-        background: url(videos/Love-Coding.jpg) #000 no-repeat center center fixed;
-    }
-    .bgVideo {
-        display: none;
-    }
+  outline: none;
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 52px;
+  padding: 0 16px;
+  color: #ff1744;
 }
